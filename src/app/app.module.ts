@@ -15,6 +15,8 @@ import {
   MatToolbarModule,
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     
   ],
   providers: [],
